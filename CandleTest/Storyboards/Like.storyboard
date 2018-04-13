@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RMC-0a-1fh">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Like View Controller-->
+        <scene sceneID="CMu-q7-JhI">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="Rhw-fV-7eg" customClass="LikeViewController" customModule="CandleTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wnp-Au-0S4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="120" estimatedRowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YfG-TI-WOa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Rhw-fV-7eg" id="jS0-Ak-Qix"/>
+                                    <outlet property="delegate" destination="Rhw-fV-7eg" id="zRf-j1-DPv"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YfG-TI-WOa" firstAttribute="top" secondItem="bXh-4H-PWD" secondAttribute="top" id="2TM-t5-zsm"/>
+                            <constraint firstItem="bXh-4H-PWD" firstAttribute="bottom" secondItem="YfG-TI-WOa" secondAttribute="bottom" id="GE2-dX-IMD"/>
+                            <constraint firstItem="YfG-TI-WOa" firstAttribute="leading" secondItem="bXh-4H-PWD" secondAttribute="leading" id="M84-kG-ZWn"/>
+                            <constraint firstItem="bXh-4H-PWD" firstAttribute="trailing" secondItem="YfG-TI-WOa" secondAttribute="trailing" id="ezB-uw-b9G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="bXh-4H-PWD"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eu1-Wp-VGg"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="YfG-TI-WOa" id="I0H-p6-5Ca"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D6C-Nq-Fed" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="476" y="132.68365817091455"/>
+        </scene>
+        <!--Like-->
+        <scene sceneID="9A9-XN-pIz">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RMC-0a-1fh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Like" image="heart" id="aOw-rU-EO1"/>
+                    <toolbarItems/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aUC-nC-yON">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Rhw-fV-7eg" kind="relationship" relationship="rootViewController" id="RBj-yS-qAy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J7V-wQ-Fqi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-302" y="133"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" width="32" height="32"/>
+    </resources>
+</document>
